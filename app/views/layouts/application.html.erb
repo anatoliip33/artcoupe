@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/assets/favicon.png">
+  <title>Шкафы купе и мебель на заказ, г.Владивосток. ARTCOUPE</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller.controller_name %>">
+	<div class="layout">
+		<div class="header-top">
+			<a href="/" class="site-logo"></a> 
+			<div class="header-phone">
+				<div class="phone">+7 (423) 278-00-08</div>
+				<div>Всегда рады помочь!</div>
+			</div>
+					<div class="header">
+						<div class="border_top"></div>
+							<div class="header-menu__item">
+								<div><a href="/">о компании</a></div>
+								<div><a href="/cabinets">фото шкафов</a></div>
+								<div><a href="/qualities">качество</a></div>
+								<div><a href="/fillings">заполнения</a></div>
+								<div><a href="/stacks">стеллажи</a></div>
+								<div><a href="/materials">материалы</a></div>
+								<div><a href="/hardwares">комплектующие</a></div>
+								<div><a href="/faqs" class="text_blue">вопросы</a></div>
+								<div><a href="/contacts" class="text_blue">контакты</a></div>
+							</div>
+						<div class="border_bottom"></div>
+					</div>
+			</div>	
+		<%= yield %>
+		<div class="footer">
+			<div class="border_top"></div>
+			<div class="footer-menu">
+					<li><a href="/">о компании</a></li>
+					<li><a href="/cabinets">фото шкафов</a></li>
+					<li><a href="/qualities">качество</a></li>
+					<li><a href="/fillings">заполнения</a></li>
+					<li><a href="/stacks">стеллажи</a></li>
+					<li><a href="/materials">материалы</a></li>
+					<li><a href="/hardwares">комплектующие</a></li>
+					<li><a href="/faqs">вопросы</a></li>
+					<li><a href="/contacts">контакты</a></li>
+			</div>
+			<div class="footer-rights text_orange">&copy;2005-2013. &nbsp;artcoupe.
+			</div>
+		</div>
+	</div>
+</body>
+</html>

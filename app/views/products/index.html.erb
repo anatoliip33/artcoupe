@@ -1,0 +1,40 @@
+
+
+<% @products.each do |product| %>
+  <tr>
+  <td>
+    <dl><%= product.title %></dl>
+  </td>
+
+    <td>
+      <%= image_tag(product.image_url) %>
+    </td>
+
+  </tr>
+<% end %>
+</table>
+<br />
+
+<div class="layout-content">
+  <div class="content">
+    <div id="list">
+      <div class="photo-content">
+        <ul class="color-list">
+          <% @products.each do |t| %>
+            <li>
+              <a class="color-list__item">
+                  <%= image_tag(t.image_url) %>
+                <div class="color-list__hover">
+                  <span class="vertical-center"><%= t.title %></span>
+                </div>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

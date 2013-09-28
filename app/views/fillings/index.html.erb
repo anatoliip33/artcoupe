@@ -1,0 +1,137 @@
+<div class="layout-content">
+  <div class="content">
+    <div class="title_round title_orange title_large">заполнения</div>
+    <div class="section-description">В этом разделе предоставлено 150 вариантов заполнений встроенных шкафов купе и гардеробных. Возможно Вы найдёте интересующую Вас конструкцию. Каждый проект, будь то встроенный шкаф купе, гардероб или библиотека, любая мебель проектируется для каждого заказчика индивидуально.</div>
+    <div id="list">
+      <div class="categories-wrp border_top">
+        <ul class="categories-list categories-list_fill">
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы 1,1 — 1,5 м</a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы 1,5 — 2,2 м</a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы более 2,2 м</a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Библиотеки
+            </a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы глубиной до 450 мм</a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Однорельсовые системы</a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Гардеробные</a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Ниши</a>
+          </li>
+          <li>
+            <a href="/fillings?kind" class="link_dashed" data-remote="true">Угловые шкафы</a>
+          </li>
+          <li>
+            <a href="/fillings" class="link_round" data-remote="true">Показать все</a>
+          </li>
+        </ul>
+      </div>
+      <div class="photo-content border_top">
+        <ul class="photo-navigation">
+          <li>
+            <a href="/fillings?page=1" class="link_active" data-remote="true">1</a>
+          </li>
+          <li>
+            <a href="/fillings?page=2" class="link_solid" data-remote="true">2</a>
+          </li>
+          <li>
+            <a href="/fillings?page=3" class="link_solid" data-remote="true">3</a>
+          </li>
+          <li>
+            <a href="/fillings?page=4" class="link_solid" data-remote="true">4</a>
+          </li>
+          <li>
+            <a href="/fillings?page=5" class="link_solid" data-remote="true">5</a>
+          </li>
+          <li>
+            <a href="/fillings?page=6" class="link_solid" data-remote="true">6</a>
+          </li>
+          <li>
+            <a href="/fillings?page=7" class="link_solid" data-remote="true">7</a>
+          </li>
+          <li>
+            <a href="/fillings?page=8" class="link_solid" data-remote="true">8</a>
+          </li>
+          <li>
+            <a href="/fillings?page=9" class="link_solid" data-remote="true">9</a>
+          </li>
+          <li>
+            <a href="/fillings?page=10" class="link_solid" data-remote="true">10</a>
+          </li>
+          <li>
+            <a href="/fillings?page=11" class="link_solid" data-remote="true">11</a>
+          </li>
+          <li>
+            <a href="/fillings?page=12" class="link_solid" data-remote="true">12</a>
+          </li>
+          <li>
+            <a href="/fillings?page=13" class="link_solid" data-remote="true">13</a>
+          </li>
+          <li>
+            <a href="/fillings?page=14" class="link_solid" data-remote="true">14</a>
+          </li>
+          <li>
+            <a href="/fillings?page=15" class="link_solid" data-remote="true">15</a>
+          </li>
+          <li>
+            <a href="/fillings?page=16" class="link_solid" data-remote="true">16</a>
+          </li>
+          <li>
+            <a href="/fillings?page=17" class="link_solid" data-remote="true">17</a>
+          </li>
+          <li>
+            <a href="/fillings?page=18" class="link_solid" data-remote="true">18</a>
+          </li>
+          <li>
+            <a href="/fillings?page=19" class="link_solid" data-remote="true">19</a>
+          </li>
+          <li>
+            <a href="/fillings?page=20" class="link_solid" data-remote="true">20</a>
+          </li>
+          <li>
+            <a href="/fillings?page=21" class="link_solid" data-remote="true">21</a>
+          </li>
+          <li>
+            <a href="/fillings?page=22" class="link_solid" data-remote="true">22</a>
+          </li>
+          <li>
+            <a href="/fillings?page=23" class="link_solid" data-remote="true">23</a>
+          </li>
+          <li>
+            <a href="/fillings?page=24" class="link_solid" data-remote="true">24</a>
+          </li>
+          <li>
+            <a href="/fillings?page=25" class="link_solid" data-remote="true">25</a>
+          </li>
+        </ul>
+        <ul class="photo-list">
+          <% @fillings.each do |f| %>
+            <li>
+              <a class="photo-list__link">
+                <div>
+                  <%= image_tag(f.image_url) %>
+                </div>
+              </a>
+            </li>
+          <% end %>     
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content-footer border_top">
+    <div>Шкаф купе — это тоже искусство!</div>
+    <div class="text_orange">ARTCOUPE.</div>
+  </div>
+</div>

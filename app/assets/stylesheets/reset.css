@@ -1,0 +1,58 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, a, dfn, em, font, img, ins, q, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+input {
+  vertical-align: middle;
+}
+
+table, th, td {
+  border: 0 none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+table, td {
+  vertical-align: top;
+}
+
+th {
+  vertical-align: top;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+}

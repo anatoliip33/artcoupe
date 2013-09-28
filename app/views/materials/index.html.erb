@@ -1,0 +1,48 @@
+<div class="layout-content">
+  <div class="content">
+    <div class="title_round title_orange title_large">Материалы</div>
+    <div class="warranty">
+      <div class="warranty_large">2 года гарантии</div>
+      <div class="warranty_small">на установленную мебель</div>
+    </div>
+    <div class="section-description">Для изготовления шкафов купе мы используем ДСП Австрийского (EGGER) и Российского производства.</div>
+    <div id="list">
+      <div class="categories-wrp border_bottom border_top">
+        <ul class="categories-list categories-list_fill">
+          <li><a href="/materials?kind" class="link_round" data-remote="true">Цвет ДСП</a>
+          </li>
+          <li><a href="/materials?kind" class="link_dashed" data-remote="true">Цвет профиля</a>
+          </li>
+          <li><a href="/materials?kind" class="link_dashed" data-remote="true">Прочие материалы</a>
+          </li>
+          <li><a href="/materials?kind" class="link_dashed" data-remote="true">Показать все</a>
+          </li>
+        </ul>
+      </div>
+      <div class="photo-content">
+        <ul class="photo-navigation">
+          <li><a href="/materials?kind" class="link_active" data-remote="true">1</a>
+          </li>
+        </ul>
+        <ul class="color-list">
+          <% @materials.each do |m| %>
+            <li>
+              <a class="color-list__item">
+              <div>
+                <%= image_tag(m.image_url) %>
+              </div>
+                <div class="color-list__hover">
+                  <span class="vertical-center"><%= m.title %></span>
+                </div>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content-footer border_top">
+    <div>Шкаф купе — это тоже искусство!</div>
+    <div class="text_orange">ARTCOUPE.</div>
+  </div>
+</div>
