@@ -1,7 +1,8 @@
 class CreateFillings < ActiveRecord::Migration
   def change
     create_table :fillings do |t|
-    	t.string :image_url
+    	t.attachment :image
+    	t.string :name
 
       t.timestamps
     end

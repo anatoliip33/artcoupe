@@ -9,7 +9,15 @@
       <li><a href="/stacks?page=1" class="link_active" data-remote="true">1</a></li>
     </ul>
     <ul class="photo-list">
-      <% @stack.image.url %>
+      <% @stacks.each do |s| %>
+        <li>
+          <a class="photo-list__link">
+            <div>
+              <%= image_tag(s.image) %>
+            </div>
+          </a>
+        </li>
+      <% end %>
     </ul>
   </div>
   </div>

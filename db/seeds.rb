@@ -13,16 +13,32 @@ Product.delete_all
   	)
 end
 
-Stack.create({
-name: 'Stack #1',
-image: File.open(Rails.root.join('test', 'assets', 'images', 'stacks', 'stack1.png'))
-})
-
+2.times do |i|
+  Stack.create({
+  name: "stack-#{i+1}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'stacks', "stack-#{i+1}.png"))
+  })
+end
 
 6.times do |i|
-	Filling.create(
-		image_url: "wardrobe-#{i+1}.jpg"
-		)
+  Filling.create({
+  name: "wardrobe-#{i+1}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'fillings', 'wardrobe', "wardrobe-#{i+1}.jpg"))
+  })
+end
+
+2.times do |i|
+  Quality.create({
+  name: "quality-#{i+1}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'qualities', "quality-#{i+1}.png"))
+  })
+end
+
+6.times do |c|
+  Cabinet.create({
+  name: "cabinet-#{c+1}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', "cabinet-#{c+1}.png"))
+  })
 end
 
 # . . .

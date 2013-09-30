@@ -14,11 +14,13 @@
 ActiveRecord::Schema.define(:version => 20130905190131) do
 
   create_table "cabinets", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "image_url"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "name"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "contacts", :force => true do |t|
@@ -34,9 +36,13 @@ ActiveRecord::Schema.define(:version => 20130905190131) do
   end
 
   create_table "fillings", :force => true do |t|
-    t.string   "image_url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "name"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "hardwares", :force => true do |t|
@@ -60,9 +66,13 @@ ActiveRecord::Schema.define(:version => 20130905190131) do
   end
 
   create_table "qualities", :force => true do |t|
-    t.string   "image_url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "name"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "stacks", :force => true do |t|

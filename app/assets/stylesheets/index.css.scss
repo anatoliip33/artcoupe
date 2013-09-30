@@ -258,11 +258,6 @@
 	border-color: #83a7ca transparent transparent transparent;
 }
 
-.section-description {
-	margin: 35px 0 55px;
-	width: 48%;
-}
-
 .section-description span {
 	letter-spacing: 1px;
 } 
@@ -524,16 +519,6 @@
 	line-height: 13px;
 }
 
-.section-description {
-	margin: 35px 0 55px;
-	width: 50%;
-}
-
-.quality-description {
-	width: 770px;
-	font-size: 14px;
-}
-
 .quality-info {
 	padding: 50px 0 45px;
 }
@@ -650,7 +635,13 @@
 
 .section-description {
 	margin: 35px 0 55px;
-	width: 49%;
+	width: 50%;
+	font-size: 14px;
+}
+
+.quality-description {
+	width: 760px;
+	font-size: 14px;
 }
 
 .photo-content {

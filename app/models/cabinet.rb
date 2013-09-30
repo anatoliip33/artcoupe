@@ -1,3 +1,4 @@
 class Cabinet < ActiveRecord::Base
-  attr_accessible :description, :image_url, :title
+  attr_accessible :image, :name
+  has_attached_file :image
 end

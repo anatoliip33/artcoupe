@@ -72,28 +72,15 @@
           </li>
         </ul>
         <ul class="photo-list">
-          <li>
-            <a href="/popup/cabinet?index=0" class="photo-list__link" data-remote="true">
-              <img alt="Thumb_dsc003211" height="200" src="assets/photo-1.png" width="280" />
-            </a>
-          </li>
-          <li>
-            <a href="/popup/cabinet?index=1" class="photo-list__link" data-remote="true">
-              <img alt="Thumb_dsc00318" height="200" src="assets/photo-2.png" width="280" />
-            </a>
-          </li>
-          <li>
-            <a href="/popup/cabinet?index=2" class="photo-list__link" data-remote="true"><img alt="Thumb_dsc00299" height="200" src="assets/photo-3.png" width="280" /></a>
-          </li>
-          <li>
-            <a href="/popup/cabinet?index=3" class="photo-list__link" data-remote="true"><img alt="Thumb_dsc00278" height="200" src="assets/photo-1.png" width="280" /></a>
-          </li>
-          <li>
-            <a href="/popup/cabinet?index=4" class="photo-list__link" data-remote="true"><img alt="Thumb_dsc002681" height="200" src="assets/photo-2.png" width="280" /></a>
-          </li>
-          <li>
-            <a href="/popup/cabinet?index=5" class="photo-list__link" data-remote="true"><img alt="Thumb_dsc00248" height="200" src="assets/photo-3.png" width="280" /></a>
-          </li>
+          <% @cabinets.each do |c| %>
+            <li>
+              <a class="photo-list__link">
+                <div>
+                  <%= image_tag(c.image) %>
+                </div>
+              </a>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
