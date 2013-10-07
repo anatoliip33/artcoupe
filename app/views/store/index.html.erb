@@ -31,21 +31,15 @@
 					<ul class="index-rotator-list">
 						<li class="index-rotator-page">
 							<ul>
-								<li>
-									<a href="/popup/cabinet?index" class="photo-list__link" data-remote="true">
-										<img alt="Thumb_dsc003211" height="200" src="assets/photo-1.png" width="280" />
-									</a>
-								</li>
-								<li>
-									<a href="/popup/cabinet?index" class="photo-list__link" data-remote="true">
-										<img alt="Thumb_dsc00318" height="200" src="assets/photo-2.png" width="280" />
-									</a>
-								</li>
-								<li>
-									<a href="/popup/cabinet?index" class="photo-list__link" data-remote="true">
-										<img alt="Thumb_dsc00299" height="200" src="assets/photo-3.png" width="280" />
-									</a>
-								</li>
+								<% @cabinets.each do |c| %>
+            								<li>
+				              				<a class="photo-list__link">
+				                					<div>
+				                  						<%= image_tag(c.image) %>
+				                					</div>
+				              				</a>
+            								</li>
+          							<% end %>
 							</ul>
 						</li>
 					</ul>
@@ -106,53 +100,18 @@
 					<ul class="index-rotator-list">
 						<li class="index-rotator-page">
 							<ul>
-								<li>
-									<a class="color-list__item">
-										<img alt="55501" height="120" src="assets/color-1.png" width="120" />
-										<div class="color-list__hover">
-											<span class="vertical-center">Кожзам бордовый узор</span>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="color-list__item">
-										<img alt="55508" height="120" src="assets/color-2.png" width="120" /><div class="color-list__hover">
-											<span class="vertical-center">Кожзам бежевый узор</span>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="color-list__item">
-										<img alt="Biegeglass" height="120" src="assets/color-3.png" width="120" />
-										<div class="color-list__hover">
-											<span class="vertical-center">Стекло бежевое</span>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="color-list__item">
-										<img alt="Hy5409" height="120" src="assets/color-1.png" width="120" />
-										<div class="color-list__hover">
-											<span class="vertical-center">Ротанг</span>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="color-list__item">
-										<img alt="52002" height="120" src="assets/color-2.png" width="120" />
-										<div class="color-list__hover">
-											<span class="vertical-center">Кожзам с тиснением какао</span>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="color-list__item">
-										<img alt="52003" height="120" src="assets/color-3.png" width="120" />
-										<div class="color-list__hover">
-											<span class="vertical-center">Кожзам с тиснением бежевый</span>
-										</div>
-									</a>
-								</li>
+							  	<% @materials.each do |m| %>
+							            <li>
+							              <a class="color-list__item">
+							              <div>
+							                <%= image_tag(m.image_url) %>
+							              </div>
+							                <div class="color-list__hover">
+							                  <span class="vertical-center"><%= m.title %></span>
+							                </div>
+							              </a>
+							            </li>
+							       <% end %>
 							</ul>
 						</li>
 					</ul>
@@ -175,13 +134,7 @@
 						<a href="/contacts" class="link_solid">Подробнее</a>
 					</div>
 				</div>
-				<div class="contact-map" id="map">
-
-					<iframe width="200" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?t=m&amp;hl=ru-RU&amp;mapclient=apiv3&amp;ie=UTF8&amp;ll=43.162673,131.911179&amp;spn=0.001878,0.002146&amp;z=17&amp;output=embed"></iframe><br />
-
-					<div class="pin2"></div>
-
-				</div>
+				<div class = "contact-map" id="map-canvas"></div>
 			</div>
 			<div class="index-faq">
 				<div class="title_blue title_round title_small">Вопросы и ответы</div>

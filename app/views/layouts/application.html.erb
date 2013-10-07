@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" href="/assets/favicon.png">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    	<meta charset="utf-8">
+    
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
+	</script>
+
+    <script type="text/javascript">
+
+function initialize() {
+  var mapOptions = {
+    zoom: 17,
+    center: new google.maps.LatLng(43.162498,131.911582),
+    disableDefaultUI: true,
+    rotateControl: false,
+    scrollwheel: false,
+    mapTypeControl:false,
+   draggable: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+ var image = 'pin.png';
+  var myLatLng = new google.maps.LatLng(43.162671,131.911552);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+  	<link rel="shortcut icon" href="/assets/favicon.png">
   <title>Шкафы купе и мебель на заказ, г.Владивосток. ARTCOUPE</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -9,29 +43,52 @@
 </head>
 <body class="<%= controller.controller_name %>">
 	<div class="layout">
-		<div class="header-top">
-			<a href="/" class="site-logo"></a> 
-			<div class="header-phone">
-				<div class="phone">+7 (423) 278-00-08</div>
-				<div>Всегда рады помочь!</div>
-			</div>
-					<div class="header">
-						<div class="border_top"></div>
-							<div class="header-menu__item">
-								<div><a href="/">о компании</a></div>
-								<div><a href="/cabinets">фото шкафов</a></div>
-								<div><a href="/qualities">качество</a></div>
-								<div><a href="/fillings">заполнения</a></div>
-								<div><a href="/stacks">стеллажи</a></div>
-								<div><a href="/materials">материалы</a></div>
-								<div><a href="/hardwares">комплектующие</a></div>
-								<div><a href="/faqs" class="text_blue">вопросы</a></div>
-								<div><a href="/contacts" class="text_blue">контакты</a></div>
-							</div>
-						<div class="border_bottom"></div>
+		<div class="layout-middle">
+			<div class="layout-header">
+				<div class="header">
+					<div class="header-top">
+						<div class="header-phone">
+							<div class="phone text_blue">+7 (423) 278-00-08</div>
+							<div class="phone-hint">Всегда рады помочь!</div>
+						</div>
+						<a href="/" class="site-logo"></a> 
 					</div>
-			</div>	
+						<div class="header-menu-wrp border_bottom border_top">
+							<ul class="header-menu">
+								<li>
+									<a href="/" class="header-menu__item header-menu__item_active">о компании</a>	
+								</li>
+								<li>
+									<a href="/cabinets" class="header-menu__item">фото шкафов</a>
+								</li>
+								<li>
+									<a href="/qualities" class="header-menu__item">качество</a>
+								</li>
+								<li>
+									<a href="/fillings" class="header-menu__item">заполнения</a>
+								</li>
+								<li>
+									<a href="/stacks" class="header-menu__item">стеллажи</a>
+								</li>
+								<li>
+									<a href="/materials" class="header-menu__item">материалы</a>
+								</li>
+								<li>
+									<a href="/hardwares" class="header-menu__item">комплектующие</a>
+								</li>
+								<li>
+									<a href="/faqs" class="header-menu__item text_blue">вопросы</a>
+								</li>
+								<li>
+									<a href="/contacts" class="header-menu__item text_blue">контакты</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			
 		<%= yield %>
+		</div>
 		<div class="footer">
 			<div class="border_top"></div>
 			<div class="footer-menu">

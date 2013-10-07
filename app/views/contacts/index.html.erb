@@ -19,20 +19,9 @@
             <div>+ 7 (423) 237-51-28:</div>
           </div>
         </div>
-        <div class="contact-map" id="map">
-          
-          <iframe width="300" height="270" src="https://maps.google.com/maps?t=m&amp;hl=ru-RU&amp;mapclient=apiv3&amp;ie=UTF8&amp;ll=43.162767,131.912155&amp;spn=0.002348,0.003219&amp;z=17&amp;output=embed">
-          </iframe><br />
-         
-          <div class="pin"></div>
-        </div>
+            <div class = "contact-map" id="map-canvas"></div>
       </div>
-      
       <form accept-charset="UTF-8" action="/contacts/create_feedback" class="contacts-form" id="new_feedback" method="post">
-        <div style="margin:0;padding:0;display:inline">
-          <input name="utf8" type="hidden" value="&#x2713;" />
-          <input name="authenticity_token" type="hidden" value="lBb8nLD7htmU99lQQYHus3LhOGeUa/oOCGJ84efmvlE=" />
-        </div>
         <label class="text_blue text_bold">Написать нам:</label>
         <input class="contact-mail" id="feedback_email" name="feedback[email]" placeholder="E-mail" size="30"type="email" />
         <textarea id="feedback_text" name="feedback[text]" placeholder="Текст сообщения">

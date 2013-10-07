@@ -1,12 +1,13 @@
 #encoding: utf-8
 
-Product.delete_all
 # . . .
     material_names = ["ДСП Дуб Феррара чёрно-коричневый (EGGER)", "ДСП Французский Орех (EGGER)", 
     								"ДСП Фино Бронза (EGGER)", "ДСП Ясень Серцевинный (EGGER)", 
-    								"ДСП Береза Майнау (EGGER)", "ДСП Дуб натуральный (EGGER)"]
+    								"ДСП Береза Майнау (EGGER)", "ДСП Дуб натуральный (EGGER)", 
+                                                    "Кожзам бордовый узор", "Кожзам бежевый узор", "Кожзам с тиснением какао",
+                                                    "Кожзам с тиснением бежевый"]
 
-15.times do |i|
+21.times do |i|
   Material.create(
   	title: material_names[i % material_names.length], 
   	image_url: "color-#{i+1}.png", 
@@ -37,7 +38,7 @@ end
 6.times do |c|
   Cabinet.create({
   name: "cabinet-#{c+1}",
-  image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', "cabinet-#{c+1}.png"))
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', "cabinet-#{c+1}.jpg"))
   })
 end
 

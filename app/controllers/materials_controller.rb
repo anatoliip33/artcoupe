@@ -2,7 +2,7 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = Material.all
+    @materials = Material.limit(15).all
 
     respond_to do |format|
       format.html # index.html.erb

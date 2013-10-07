@@ -2,7 +2,9 @@ class FaqsController < ApplicationController
   # GET /faqs
   # GET /faqs.json
   def index
-    @faqs = Faq.all
+  
+    @faqs = Faq.paginate(:page => params[:page], :per_page => 5)
+
 
     respond_to do |format|
       format.html # index.html.erb
