@@ -2,7 +2,7 @@ class CabinetsController < ApplicationController
   # GET /cabinets
   # GET /cabinets.json
   def index
-    @cabinets = Cabinet.all
+    @cabinets = Cabinet.paginate(:page => params[:page], :per_page => 6)
 
     respond_to do |format|
       format.html # index.html.erb

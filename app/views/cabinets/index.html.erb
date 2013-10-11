@@ -40,36 +40,7 @@
       </div>
       <div class="photo-content border_top">
         <ul class="photo-navigation">
-          <li>
-            <a href="/cabinets?page=1" class="link_active" data-remote="true">1</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=2" class="link_solid" data-remote="true">2</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=3" class="link_solid" data-remote="true">3</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=4" class="link_solid" data-remote="true">4</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=5" class="link_solid" data-remote="true">5</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=6" class="link_solid" data-remote="true">6</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=7" class="link_solid" data-remote="true">7</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=8" class="link_solid" data-remote="true">8</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=9" class="link_solid" data-remote="true">9</a>
-          </li>
-          <li>
-            <a href="/cabinets?page=10" class="link_solid" data-remote="true">10</a>
-          </li>
+          <%= will_paginate @cabinets %>
         </ul>
         <ul class="photo-list">
           <% @cabinets.each do |c| %>

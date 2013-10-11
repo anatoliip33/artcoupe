@@ -9,20 +9,23 @@
     <div id="list">
       <div class="categories-wrp border_bottom border_top">
         <ul class="categories-list categories-list_fill">
-          <li><a href="/materials?kind" class="link_round" data-remote="true">Цвет ДСП</a>
+          <li>
+            <%= link_to "Цвет ДСП", materials_path(:category => 'dsp' ), class: 'link_round' %>
           </li>
-          <li><a href="/materials?kind" class="link_dashed" data-remote="true">Цвет профиля</a>
+          <li>
+            <%= link_to "Цвет профиля", materials_path(:category => 'color prof' ), class: 'link_dashed' %>
           </li>
-          <li><a href="/materials?kind" class="link_dashed" data-remote="true">Прочие материалы</a>
+          <li>
+            <%= link_to "Прочие материалы", materials_path(:category => 'other' ), class: 'link_dashed' %>
           </li>
-          <li><a href="/materials?kind" class="link_dashed" data-remote="true">Показать все</a>
+          <li>
+            <%= link_to "Показать все", materials_path(:category => nil ), class: 'link_dashed' %>
           </li>
         </ul>
       </div>
       <div class="photo-content">
         <ul class="photo-navigation">
-          <li><a href="/materials?kind" class="link_active" data-remote="true">1</a>
-          </li>
+          <%= will_paginate @materials %>
         </ul>
         <ul class="color-list">
           <% @materials.each do |m| %>
