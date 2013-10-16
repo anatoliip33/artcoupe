@@ -30,6 +30,8 @@ gem 'kaminari'
 
 gem "paperclip", "~> 3.5.1"
 
+gem 'active_link_to'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

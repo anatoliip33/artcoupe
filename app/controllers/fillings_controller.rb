@@ -2,7 +2,7 @@ class FillingsController < ApplicationController
   # GET /fillings
   # GET /fillings.json
   def index
-    @fillings = Filling.paginate(:page => params[:page], :per_page => 6)
+    @fillings = Filling.where(:category => params[:category]).paginate(:page => params[:page], :per_page => 6)
 
     respond_to do |format|
       format.html # index.html.erb

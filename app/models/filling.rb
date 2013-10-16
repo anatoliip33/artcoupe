@@ -1,4 +1,4 @@
 class Filling < ActiveRecord::Base
-  attr_accessible :image, :name
+  attr_accessible :image, :name, :category
   has_attached_file :image
 end

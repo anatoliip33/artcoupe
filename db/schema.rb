@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130905190131) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "name"
+    t.string   "category"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130905190131) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "name"
+    t.string   "category"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -55,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20130905190131) do
   create_table "materials", :force => true do |t|
     t.string   "title"
     t.string   "image_url"
+    t.string   "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

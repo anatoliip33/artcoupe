@@ -3,6 +3,7 @@ class CreateFillings < ActiveRecord::Migration
     create_table :fillings do |t|
     	t.attachment :image
     	t.string :name
+    	t.string :category
 
       t.timestamps
     end

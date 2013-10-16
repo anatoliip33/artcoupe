@@ -6,35 +6,34 @@
       <div class="categories-wrp border_top">
         <ul class="categories-list categories-list_fill">
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы 1,1 — 1,5 м</a>
+            <%= link_to_unless_current("Шкафы 1,1 — 1,5 м", fillings_path(:category => 'smallcoupe' ), class: 'link_dashed') { link_to("Шкафы 1,1 — 1,5 м", fillings_path(:category => 'smallcoupe' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы 1,5 — 2,2 м</a>
+            <%= link_to_unless_current("Шкафы 1,5 — 2,2 м", fillings_path(:category => 'mediumcoupe' ), class: 'link_dashed') { link_to("Шкафы 1,5 — 2,2 м", fillings_path(:category => 'mediumcoupe' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы более 2,2 м</a>
+            <%= link_to_unless_current("Шкафы более 2,2 м", fillings_path(:category => 'bigcoupe' ), class: 'link_dashed') { link_to("Шкафы более 2,2 м", fillings_path(:category => 'bigcoupe' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Библиотеки
-            </a>
+            <%= link_to_unless_current("Библиотеки", fillings_path(:category => 'biblio' ), class: 'link_dashed') { link_to("Библиотеки", fillings_path(:category => 'biblio' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Шкафы глубиной до 450 мм</a>
+            <%= link_to_unless_current("Шкафы глубиной до 450 мм", fillings_path(:category => 'box' ), class: 'link_dashed') { link_to("Шкафы глубиной до 450 мм", fillings_path(:category => 'box' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Однорельсовые системы</a>
+            <%= link_to_unless_current("Однорельсовые системы", fillings_path(:category => 'onerail' ), class: 'link_dashed') { link_to("Однорельсовые системы", fillings_path(:category => 'onerail' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Гардеробные</a>
+            <%= link_to_unless_current("Гардеробные", fillings_path(:category => 'wardrobe' ), class: 'link_dashed') { link_to("Гардеробные", fillings_path(:category => 'wardrobe' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Ниши</a>
+            <%= link_to_unless_current("Ниши", fillings_path(:category => 'nisha' ), class: 'link_dashed') { link_to("Ниши", fillings_path(:category => 'nisha' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings?kind" class="link_dashed" data-remote="true">Угловые шкафы</a>
+            <%= link_to_unless_current("Угловые шкафы", fillings_path(:category => 'corner' ), class: 'link_dashed') { link_to("Угловые шкафы", fillings_path(:category => 'corner' ), class: 'link_round') } %>
           </li>
           <li>
-            <a href="/fillings" class="link_round" data-remote="true">Показать все</a>
+            <%= link_to_unless_current("Показать все", fillings_path(:category => nil ), class: 'link_dashed') { link_to("Показать все", fillings_path(:category => nil ), class: 'link_round') } %>
           </li>
         </ul>
       </div>

@@ -2,7 +2,9 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = Material.paginate(:page => params[:page], :per_page => 18)
+    @materials = Material.where(:category => params[:category]).paginate(:page => params[:page], :per_page => 18).limit(15)
+    
+    
 
     respond_to do |format|
       format.html # index.html.erb

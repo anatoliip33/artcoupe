@@ -20,11 +20,10 @@
 					<li class="title_orange title_round title_small">Последние работы</li>
 					<li class="text_small">Посмотреть все работы:</li>
 					<li>
-						<a href="/home/cabinets?type" class="link_round" data-remote="true">Шкафы</a>
+						<%= link_to_unless_current("Шкафы", store_path(:category => '2dors' ), class: 'link_solid') { link_to("Шкафы", store_path(:category => '2dors' ), class: 'link_round') } %>
 					</li>
 					<li>
-						<a href="/home/cabinets?type" class="link_solid" data-remote="true">Стеллажи
-						</a>
+						<%= link_to "Стеллажи", params.merge({:category => 'stacks'}), class: "#{ (params[:category] == 'stacks') ? 'link_round' : 'link_solid'}" %>
 					</li>
 				</ul>
 				<div class="index-rotator-wrp">
@@ -85,15 +84,13 @@
 					<li class="title_orange title_round title_small">Популярные материалы</li>
 					<li class="text_small">Посмотреть все материалы:</li>
 					<li>
-						<a href="/home/materials?kind" class="link_solid" data-remote="true">Цвет ДСП</a>
+						<%= link_to "Цвет ДСП", params.merge({:category => 'dsp'}), class: "#{ (params[:category] == 'dsp') ? 'link_round' : 'link_solid'}" %>
 					</li>
 					<li>
-						<a href="/home/materials?kind" class="link_solid" data-remote="true">Цвет профиля
-						</a>
+						<%= link_to_unless_current("Цвет профиля", store_path(:category => 'color prof' ), class: 'link_solid') { link_to("Цвет профиля", store_path(:category => 'color prof' ), class: 'link_round') } %>
 					</li>
 					<li>
-						<a href="/home/materials?kind" class="link_round" data-remote="true">Прочие материалы
-						</a>
+						<%= link_to_unless_current("Прочие материалы", store_path(:category => 'other' ), class: 'link_solid') { link_to("Прочие материалы", store_path(:category => 'other' ), class: 'link_round') } %>
 					</li>
 				</ul>
 				<div class="index-rotator-wrp">
