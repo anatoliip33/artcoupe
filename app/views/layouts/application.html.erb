@@ -35,7 +35,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
 
-  	<link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="shortcut icon" href="/assets/images/favicon.png">
   <title>Шкафы купе и мебель на заказ, г.Владивосток. ARTCOUPE</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -51,36 +51,38 @@ google.maps.event.addDomListener(window, 'load', initialize);
 							<div class="phone text_blue">+7 (423) 278-00-08</div>
 							<div class="phone-hint">Всегда рады помочь!</div>
 						</div>
-						<a href="/" class="site-logo"></a> 
+						<div>
+							<%= link_to ' ', root_path, class: 'site-logo' %>
+						</div>
 					</div>
 						<div class="header-menu-wrp border_bottom border_top">
 							<ul class="header-menu">
 								<li>
-									<a href="/" class="header-menu__item header-menu__item_active">о компании</a>	
+									<%= link_to_unless_current("о компании", store_path, class: 'header-menu__item') { link_to("о компании", store_path, class: 'header-menu__item_active') } %>	
 								</li>
 								<li>
-									<a href="/cabinets" class="header-menu__item">фото шкафов</a>
+            								<%= link_to_unless_current("фото шкафов", cabinets_path, class: 'header-menu__item') { link_to("фото шкафов", cabinets_path, class: 'header-menu__item_active') } %>
+            							</li>
+								<li>
+									<%= link_to_unless_current("качество", fillings_path, class: 'header-menu__item') { link_to("качество", fillings_path, class: 'header-menu__item_active') } %>
 								</li>
 								<li>
-									<a href="/qualities" class="header-menu__item">качество</a>
+									<%= link_to_unless_current("заполнения", qualities_path, class: 'header-menu__item') { link_to("заполнения", qualities_path, class: 'header-menu__item_active') } %>
 								</li>
 								<li>
-									<a href="/fillings" class="header-menu__item">заполнения</a>
+									<%= link_to_unless_current("стеллажи", stacks_path, class: 'header-menu__item') { link_to("стеллажи", stacks_path, class: 'header-menu__item_active') } %>
+								</li>	
+								<li>
+									<%= link_to_unless_current("материалы", materials_path, class: 'header-menu__item') { link_to("материалы", materials_path, class: 'header-menu__item_active') } %>
 								</li>
 								<li>
-									<a href="/stacks" class="header-menu__item">стеллажи</a>
+									<%= link_to_unless_current("комплектующие", hardwares_path, class: 'header-menu__item') { link_to("комплектующие", hardwares_path, class: 'header-menu__item_active') } %>
 								</li>
 								<li>
-									<a href="/materials" class="header-menu__item">материалы</a>
+									<%= link_to_unless_current("вопросы", faqs_path, class: 'header-menu__item_text_blue') { link_to("вопросы", faqs_path, class: 'header-menu__item_active_text_blue') } %>
 								</li>
 								<li>
-									<a href="/hardwares" class="header-menu__item">комплектующие</a>
-								</li>
-								<li>
-									<a href="/faqs" class="header-menu__item text_blue">вопросы</a>
-								</li>
-								<li>
-									<a href="/contacts" class="header-menu__item text_blue">контакты</a>
+									<%= link_to_unless_current("контакты", contacts_path, class: 'header-menu__item_text_blue') { link_to("контакты", contacts_path, class: 'header-menu__item_active_text_blue') } %>
 								</li>
 							</ul>
 						</div>

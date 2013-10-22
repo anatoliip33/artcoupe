@@ -1,0 +1,44 @@
+@font-face {
+	font-family: "PT Sans";
+	src: asset-url('PTS55F_W.eot', font); 
+	src: local('PT Sans'),
+		 asset-asset-url('PTS55F_W.woff', font) format('woff'), 
+		 asset-url('PTS55F_W.ttf', font) format('truetype'), 
+		 asset-asset-url('PTS55F_W.svg#PTSans-Regular', font) format('svg');
+}
+
+@font-face {
+	font-family: "PT Sans Italic";
+	src: asset-url('PTS55F_W.eot', font);
+	src: local('PT Sans Italic'),
+		 asset-url('PTS56F_W.ttf', font) format('truetype'), 
+		 asset-url('PTS56F_W.woff', font) format('woff'), 
+		 asset-url('PTS56F_W.svg#PTSans-Regular', font) format('svg');
+}
+
+@font-face {
+	font-family: "PT Sans Bold";
+	src: asset-url('PTS75F_W.eot', font);
+	src: local('PT Sans Bold'),
+		 asset-url('PTS75F_W.ttf', font) format('truetype'), 
+		 asset-url('PTS75F_W.woff', font) format('woff'), 
+		 asset-url('PTS75F_W.svg#PTSans-Regular', font) format('svg');
+}
+
+@font-face {
+	font-family: "Din Mid";
+	src: asset-url('DIN_Round_Pro-Medium.eot', font);
+	src: local('Din Mid'),
+		 asset-url('DIN_Round_Pro-Medium.ttf', font) format('truetype'), 
+		 asset-url('DIN_Round_Pro-Medium.woff', font) format('woff'), 
+		 asset-url('DIN_Round_Pro-Medium.svg#PTSans-Regular', font) format('svg');
+}
+
+@font-face {
+	font-family: "Din";
+	src: asset-url('DIN_Round_Pro-Regular.eot', font);
+	src: local('Din'),
+		 asset-url('DIN_Round_Pro-Regular.ttf', font) format('truetype'), 
+		 asset-url('DIN_Round_Pro-Regular.woff', font) format('woff'), 
+		 asset-url('DIN_Round_Pro-Regular.svg#PTSans-Regular', font) format('svg');
+}

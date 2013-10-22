@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130905190131) do
+ActiveRecord::Schema.define(:version => 20131017183959) do
 
   create_table "cabinets", :force => true do |t|
     t.string   "image_file_name"
@@ -72,6 +72,13 @@ ActiveRecord::Schema.define(:version => 20130905190131) do
     t.datetime "updated_at",         :null => false
   end
 
+  create_table "settings", :force => true do |t|
+    t.string   "hashed_password"
+    t.text     "routes"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "stacks", :force => true do |t|
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -80,6 +87,13 @@ ActiveRecord::Schema.define(:version => 20130905190131) do
     t.string   "name"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

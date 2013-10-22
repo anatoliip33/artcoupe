@@ -1,4 +1,8 @@
 Artcoupe::Application.routes.draw do
+  get 'admin' => 'admin#index'
+
+  resources :settings
+
   resources :cabinets, only: [:index]
 
 
@@ -25,6 +29,7 @@ Artcoupe::Application.routes.draw do
 
   get "store/index"
 
+root :to => 'store#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
