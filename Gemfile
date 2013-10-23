@@ -34,6 +34,8 @@ gem 'active_link_to'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

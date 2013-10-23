@@ -1,5 +1,9 @@
 #encoding: utf-8
 
+Setting.create(
+  hashed_password: BCrypt::Password.create('admin')
+)
+
 # . . .
     material_names = ["ДСП Дуб Феррара чёрно-коричневый (EGGER)", "ДСП Французский Орех (EGGER)", 
     								"ДСП Фино Бронза (EGGER)", "ДСП Ясень Серцевинный (EGGER)", 

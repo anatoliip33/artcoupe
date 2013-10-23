@@ -18,9 +18,9 @@
     <p class="notice"><%= notice %></p>
   <% end %>
   <form class="form-horizontal" action="login_attempt" method="POST">
-    <input type="password" id="password" name="password" placeholder="<%=t_s 'admin.login.password' %>" />
+    <input type="password" id="password" name="password" placeholder="<%=  admin.login.password %>" />
     <input type="hidden" id="return_to" name="return_to" value="<%= flash[:return_to] %>" />
-    <button type="submit" class="btn"><%=t 'admin.login.login' %></button>
+    <button type="submit" class="btn"><%= admin.login.login %></button>
   </form>
 </div>
 </body>

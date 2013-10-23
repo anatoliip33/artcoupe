@@ -74,7 +74,6 @@ ActiveRecord::Schema.define(:version => 20131017183959) do
 
   create_table "settings", :force => true do |t|
     t.string   "hashed_password"
-    t.text     "routes"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
@@ -87,13 +86,6 @@ ActiveRecord::Schema.define(:version => 20131017183959) do
     t.string   "name"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
   end
 
 end

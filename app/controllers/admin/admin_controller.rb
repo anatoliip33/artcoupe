@@ -1,10 +1,10 @@
-class AdminController < ApplicationController
+class: Admin::AdminController < ApplicationController
 layout 'admin'
 
-before_filter :check_auth, :only => [:logout]
+  before_filter :check_auth, :only => [:logout]
 
-  def index
-	render 'login', :layout => nil
+  def login
+    render 'login', :layout => nil
   end
 
   def logout
@@ -18,7 +18,7 @@ before_filter :check_auth, :only => [:logout]
       redirect_to params[:return_to]
     else
       redirect_to url_for(:action => "login"),
-                  notice: t('admin.login.invalid_password'),
+                  notice: 'admin.login.invalid_password',
                   :flash => { :return_to => params[:return_to] }
     end
   end
