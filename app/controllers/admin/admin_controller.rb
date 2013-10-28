@@ -1,4 +1,4 @@
-class: Admin::AdminController < ApplicationController
+class Admin::AdminController < ApplicationController
 layout 'admin'
 
   before_filter :check_auth, :only => [:logout]

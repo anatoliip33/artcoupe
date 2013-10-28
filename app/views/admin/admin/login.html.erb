@@ -1,11 +1,13 @@
 <html>
 <head>
-  <title>TMM</title>
+  <title>Artcoupe</title>
   <%= stylesheet_link_tag "admin", :media => "all" %>
   <%= csrf_meta_tags %>
   <style>
     #password {
+      display: inline-block;
       height: 30px;
+      width: 200px;
     }
     body {
       text-align: center;
@@ -17,10 +19,10 @@
   <% if notice %>
     <p class="notice"><%= notice %></p>
   <% end %>
-  <form class="form-horizontal" action="login_attempt" method="POST">
-    <input type="password" id="password" name="password" placeholder="<%=  admin.login.password %>" />
+  <form class="form-horizontal" action="login_attempt" method="POST" role="form">
+    <input type="password" id="password" name="password" class="form-control" placeholder="<%= 'Password' %>" />
     <input type="hidden" id="return_to" name="return_to" value="<%= flash[:return_to] %>" />
-    <button type="submit" class="btn"><%= admin.login.login %></button>
+    <button type="submit" class="btn"><%= 'Login' %></button>
   </form>
 </div>
 </body>

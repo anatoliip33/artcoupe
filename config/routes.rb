@@ -1,22 +1,23 @@
 Artcoupe::Application.routes.draw do
-  get 'admin' => 'admin#index'
 
   namespace :admin do
-    root :to => 'store#index'
-  end
+    resources :cabinets
+
 
   controller :admin do
         get "login" , :action => :login, :as => :login
         post "login_attempt" , :action => :login_attempt, :as => :login_attempt
         get "logout" , :action => :logout, :as => :logout
-      end
+  end
 
-      controller :settings do
-        get "settings/", :action => :index, :as => :settings
-        put "settings/save"
-      end
+    controller :settings do
+    get "settings/", :action => :index, :as => :settings
+    put "settings/save"
+  end
+end
 
 
+      
 
 
   resources :settings

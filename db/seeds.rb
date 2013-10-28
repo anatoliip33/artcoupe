@@ -1,6 +1,6 @@
 #encoding: utf-8
 
-Setting.create(
+Settings.create(
   hashed_password: BCrypt::Password.create('admin')
 )
 

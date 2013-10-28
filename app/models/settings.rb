@@ -1,6 +1,8 @@
 require 'bcrypt'
 
-class Setting < ActiveRecord::Base
+class Settings < ActiveRecord::Base
+ 
+  attr_accessible :feedback_email
 
   attr_accessible :hashed_password
   attr_accessible :old_password, :new_password, :new_password_confirmation
@@ -11,11 +13,11 @@ class Setting < ActiveRecord::Base
                            :if => :password_changed?
   before_save :hash_new_password, :if => :password_changed?
 
-  @@instance = Setting.first
+  @@instance = Settings.first
 
   def self.instance()
     if not @@instance
-      @@instance = Setting.new
+      @@instance = Settings.new
       @@instance.save
     end
     return @@instance
@@ -27,7 +29,15 @@ class Setting < ActiveRecord::Base
     self.hashed_password ||= BCrypt::Password.create("admin")
   end
 
-def password_changed?
+  def password_is_valid?(password)
+    if BCrypt::Password.new(self.hashed_password).is_password? password
+      return true
+    else
+      return false
+    end
+  end
+
+  def password_changed?
       (self.respond_to? :new_password) && !self.new_password.blank?
   end
 
