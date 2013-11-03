@@ -1,17 +1,25 @@
-<%= form_for(@setting) do |f| %>
-  <% if @setting.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@setting.errors.count, "error") %> prohibited this setting from being saved:</h2>
-
-      <ul>
-      <% @setting.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for [:admin, @settings], :builder => Admin::AdminFormBuilder,
+                                  :url => { :action => :save },
+                                  :html => {
+                                    :class => "settings-form",
+                                    :id => "settings_form"
+                                  } do |f| %>
+  <div>
+    <div class="field">
+      <h4><%= f.label :old_password, 'Old Password', :class => "label label-primary" %></h4>
+      <%= f.password_field :old_password, :class => "form-control" , :id => "col-xs" %>
     </div>
-  <% end %>
-
+    <div class="field">
+      <h4><%= f.label :new_password, 'New Password', :class => "label label-primary" %></h4>
+      <%= f.password_field :new_password, :class => "form-control" , :id => "col-xs" %>
+    </div>
+    <div class="field">
+      <h4><%= f.label :new_password_confirmation, 'New Password Confirmation', :class => "label label-primary" %></h4>
+      <%= f.password_field :new_password_confirmation, :class => "form-control" , :id => "col-xs" %>
+    </div>
+  </div>
+  <hr class="span12" />
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save' %>
   </div>
 <% end %>

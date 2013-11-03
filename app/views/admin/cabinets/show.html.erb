@@ -1,2 +1,13 @@
-<h1>Admin::Cabinets#show</h1>
-<p>Find me in app/views/admin/cabinets/show.html.erb</p>
+<h2><strong><%= 'Cabinet' %></strong></h2>
+
+<p>
+  <b><%= 'Title' %></b>
+  <%= @cabinet.name %>
+</p>
+
+<p>
+  <b><%= 'File path' %></b>
+  <%= @cabinet.image %>
+</p>
+
+<%= link_to 'Index', admin_cabinets_path %>

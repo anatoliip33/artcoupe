@@ -1,0 +1,22 @@
+<%= form_for [:admin, @material], :builder => Admin::AdminFormBuilder do |f| %>
+
+  <div class="field">
+    <h4><label class="label label-primary">
+    <%= f.label :title, 'Title' %>
+    </label></h4>
+    <%= f.text_field :title, :class => "form-control" , :id => "col-xs" %>
+  </div>
+
+ <div class="field">
+  <h4><label class="label label-primary">
+    <%= f.label :image_url, 'File' %>
+  </label></h4>
+  <label>
+    <%= f.file_field :image_url %>
+  </label>
+  </div>
+
+  <%= f.submit 'Save', :class => "save"%>
+
+<% end %>
+

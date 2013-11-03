@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TMM</title>
+  <title>Artcope</title>
   <%= stylesheet_link_tag    "admin", :media => "all" %>
+  <%= javascript_include_tag "admin" %>
   <%= csrf_meta_tags %>
+  <link rel="shortcut icon" href="/assets/favicon.png">
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="navbar-inner">
+		<div class="container">
+				<ul class="nav navbar-nav role="navigation"">
+					<li><%= link_to 'ARTCOUPE', root_path, :class => "navbar-brand" %></li>
+					<li>
+						<%= link_to_unless_current("Cabinets", admin_cabinets_path) { link_to("Cabinets", 
+							admin_cabinets_path, :class => "active") } %>
+					</li>
+					<li>
+						<%= link_to_unless_current("Fillings", admin_fillings_path) { link_to("Fillings", 
+							admin_fillings_path, :class => "active") } %>
+					</li>
+					<li>
+						<%= link_to_unless_current("Stacks", admin_stacks_path) { link_to("Stacks", 
+							admin_stacks_path, :class => "active") } %>
+					</li>
+					<li>
+						<%= link_to_unless_current("Materials", admin_materials_path) { link_to("Materials", 
+							admin_materials_path, :class => "active") } %>
+					</li>
+					<li>
+						<%= link_to_unless_current("Settings", admin_settings_path) { link_to("Settings", 
+							admin_settings_path, :class => "active") } %>
+					</li>
+					<li><%= link_to 'Logout', admin_logout_path %></li>
+				</ul>
+		</div>
+	</div>
+</div>
 
-<%= link_to ' ', root_path, class: 'site-logo' %>
+<div class="container">
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <%= content_for?(:content) ? yield(:content) : yield %>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link rel="shortcut icon" href="/assets/favicon.png">
+</head>
+<body>
+<div class="layout">
+  <div class="layout-middle layout-error">
+    <div class="layout-header">
+      <div class="header-top">
+            <div>
+              <%= link_to ' ', root_path, class: 'site-logo' %>
+            </div>
+          </div>
+    </div>
+          <%= yield %>
+  </div>
+  <div class="footer">
+      <div class="border_top"></div>
+      <div class="footer-menu">
+          <li><a href="/">о компании</a></li>
+          <li><a href="/cabinets">фото шкафов</a></li>
+          <li><a href="/qualities">качество</a></li>
+          <li><a href="/fillings">заполнения</a></li>
+          <li><a href="/stacks">стеллажи</a></li>
+          <li><a href="/materials">материалы</a></li>
+          <li><a href="/hardwares">комплектующие</a></li>
+          <li><a href="/faqs">вопросы</a></li>
+          <li><a href="/contacts">контакты</a></li>
+      </div>
+      <div class="footer-rights text_orange">&copy;2005-2013. &nbsp;artcoupe.
+      </div>
+    </div>
+</div>
+</body>
+</html>

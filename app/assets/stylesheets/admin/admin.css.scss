@@ -2,13 +2,32 @@ body {
   padding-top: 60px;
 }
 
+.active{
+	background-color: #090909;	
+}
+
 .field_with_errors input, .field_with_errors textarea, .field_with_errors select {
   border: 1px solid red;
+}
+
+.container{
+	width: 970px;
+}
+.save{
+	margin-top: 10px;
+}
+
+#col-xs{
+	display: block;
+	height: 30px;
+	width: 200px;
 }
 
 span.error_description {
   color: red;
 }
 
-
-
+#create{
+	float:right;
+	margin-right: 75px;
+}

@@ -1,8 +1,5 @@
 Artcoupe::Application.routes.draw do
-
   namespace :admin do
-    resources :cabinets
-
 
   controller :admin do
         get "login" , :action => :login, :as => :login
@@ -10,17 +7,28 @@ Artcoupe::Application.routes.draw do
         get "logout" , :action => :logout, :as => :logout
   end
 
-    controller :settings do
+  controller :settings do
     get "settings/", :action => :index, :as => :settings
     put "settings/save"
   end
+
+  
+  resources :fillings
+  resources :stacks
+  resources :materials
+  resources :cabinets
+  
+  root :to => "cabinets#index"
+  
 end
 
-
+controller :error do
+  get "error/404", :action => :error404, :as => :error404
+end
       
+match '/*path', :controller => :error, :action => :error404
 
 
-  resources :settings
 
   resources :cabinets, only: [:index]
 

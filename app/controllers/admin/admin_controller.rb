@@ -18,7 +18,7 @@ layout 'admin'
       redirect_to params[:return_to]
     else
       redirect_to url_for(:action => "login"),
-                  notice: 'admin.login.invalid_password',
+                  notice: 'invalid_password',
                   :flash => { :return_to => params[:return_to] }
     end
   end

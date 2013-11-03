@@ -10,16 +10,16 @@
       <div class="categories-wrp border_bottom border_top">
         <ul class="categories-list categories-list_fill">
           <li>
-            <%= link_to_unless_current("Цвет ДСП", materials_path(:category => 'dsp' ), class: 'link_dashed') { link_to("Цвет ДСП", materials_path(:category => 'dsp' ), class: 'link_round') } %>
+            <%= link_to "Цвет ДСП", params.merge({:category => 'dsp'}), class: "#{ (params[:category] == 'dsp') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Цвет профиля", materials_path(:category => 'color prof' ), class: 'link_dashed') { link_to("Цвет профиля", materials_path(:category => 'color prof' ), class: 'link_round') } %>
+            <%= link_to "Цвет профиля", params.merge({:category => 'color prof'}), class: "#{ (params[:category] == 'color prof') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Прочие материалы", materials_path(:category => 'other' ), class: 'link_dashed') { link_to("Прочие материалы", materials_path(:category => 'other' ), class: 'link_round') } %>
+            <%= link_to "Прочие материалы", params.merge({:category => 'other'}), class: "#{ (params[:category] == 'other') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Показать все", materials_path(:category => nil ), class: 'link_dashed') { link_to("Показать все", materials_path(:category => nil ), class: 'link_round') } %>
+            <%= link_to "Показать все", params.merge({:category => nil}), class: "#{ (params[:category] == nil) ? 'link_round' : 'link_dashed'}" %>
           </li>
         </ul>
       </div>

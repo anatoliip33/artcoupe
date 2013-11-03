@@ -20,7 +20,7 @@ class Admin::SettingsController < ApplicationController
     respond_to do |format|
       if @settings.update_attributes(params[:settings])
         format.html {
-          redirect_to url_for(:action => :index), notice: 'admin.settings.settings_updated'
+          redirect_to url_for(:action => :index), notice: 'Settings updated'
         }
       else
         format.html { render :action => :index }

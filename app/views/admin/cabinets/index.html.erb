@@ -1,2 +1,26 @@
-<h1>Admin::Cabinets#index</h1>
-<p>Find me in app/views/admin/cabinets/index.html.erb</p>
+<h2><strong><%= 'Cabinets' %></strong></h2>
+
+<%= link_to 'Create', new_admin_cabinet_path, :class => "btn btn-primary", :id => "create" %>
+
+<table class="table">
+  <tr>
+    <th><%= 'File path' %></th>
+    <th><%= 'Title' %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @cabinets.each do |cabinet| %>
+  <tr>
+    <td><%=  cabinet.image %></td>
+    <td><%= cabinet.name %></td>
+    <td><%= link_to 'Show', admin_cabinet_path(cabinet) %></td>
+    <td><%= link_to 'Edit', edit_admin_cabinet_path(cabinet) %></td>
+    <td><%= link_to 'Destroy', admin_cabinet_path(cabinet), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+	<br />

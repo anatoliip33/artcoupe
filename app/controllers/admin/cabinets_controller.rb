@@ -39,7 +39,7 @@ class Admin::CabinetsController < ApplicationController
 
     respond_to do |format|
       if @cabinet.save
-        format.html { redirect_to admin_cabinets_path, notice: 'admin.cabinets.cabinet_created' }
+        format.html { redirect_to admin_cabinets_path, notice: 'Cabinet created' }
         format.json { render json: @cabinet, status: :created, location: @cabinet }
       else
         format.html { render action: "new" }
@@ -53,7 +53,7 @@ class Admin::CabinetsController < ApplicationController
 
     respond_to do |format|
       if @cabinet.update_attributes(params[:cabinet])
-        format.html { redirect_to [:admin, @cabinet], notice: 'admin.cabinets.cabinet_updated' }
+        format.html { redirect_to [:admin, @cabinet], notice: 'Cabinet updated' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -67,8 +67,8 @@ class Admin::CabinetsController < ApplicationController
     @cabinet.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_cabinets_url, notice: 'admin.cabinets.cabinet_destroyed' }
+      format.html { redirect_to admin_cabinets_url, notice: 'Cabinet destroyed' }
       format.json { head :no_content }
     end
-  end
+   end 
 end

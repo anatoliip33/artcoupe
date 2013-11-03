@@ -1,0 +1,26 @@
+<h2><strong><%= 'Stacks' %></strong></h2>
+
+<table class="table">
+  <tr>
+    <th><%= 'File path' %></th>
+    <th><%= 'Title' %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @stacks.each do |stack| %>
+  <tr>
+    <td><%=  stack.image %></td>
+    <td><%= stack.name %></td>
+    <td><%= link_to 'Show', admin_stack_path(stack) %></td>
+    <td><%= link_to 'Edit', edit_admin_stack_path(stack) %></td>
+    <td><%= link_to 'Destroy', admin_stack_path(stack), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+	<br />
+
+<%= link_to 'Create', new_admin_stack_path, :class => "btn btn-primary" %>
