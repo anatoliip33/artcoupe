@@ -12,11 +12,6 @@ class Admin::SettingsController < ApplicationController
   def save
     @settings = Settings.instance
 
-    # Fix Rails dont understand indexes in posted arrays.
-    params[:settings] = params[:settings].collect do |key, value|
-      value
-    end
-
     respond_to do |format|
       if @settings.update_attributes(params[:settings])
         format.html {

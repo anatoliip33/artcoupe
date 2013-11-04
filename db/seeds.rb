@@ -18,36 +18,35 @@ Settings.create(
                                   "Кожзам с тиснением какао", "Кожзам с тиснением бежевый"]
 
 
-
 25.times do |i|
-  Material.create(
+  Material.create({
     title: material_names[i % material_names.length], 
-    image_url: "color-#{i+1}.jpg",
-    )
+    image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+1}.jpg"))
+    })
 end
 
 15.times do |i|
-  Material.create(
+  Material.create({
   	title: material_names[i % material_names.length], 
-  	image_url: "color-#{i+1}.jpg",
+  	image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+1}.jpg")),
       category: 'dsp' 
-  	)
+  	})
 end
 
 4.times do |i|
-  Material.create(
+  Material.create({
     title: prof_names[i % prof_names.length], 
-    image_url: "color-#{i+16}.jpg",
+    image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+16}.jpg")),
     category: 'color prof' 
-    )
+    })
 end
 
 6.times do |i|
-  Material.create(
+  Material.create({
     title: other_names[i % other_names.length], 
-    image_url: "color-#{i+20}.jpg",
+    image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+20}.jpg")),
     category: 'other' 
-    )
+    })
 end
 
 

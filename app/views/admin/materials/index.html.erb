@@ -1,7 +1,5 @@
 <h2><strong><%= 'Materials' %></strong></h2>
 
-<%= link_to 'Create', new_admin_material_path, :class => "btn btn-primary", :id => "create" %>
-
 <table class="table">
   <tr>
     <th><%= 'File path' %></th>
@@ -13,14 +11,17 @@
 
   <% @materials.each do |material| %>
   <tr>
-    <td><%=  material.image_url %></td>
+    <td><%=  material.image %></td>
     <td><%= material.title %></td>
     <td><%= link_to 'Show', admin_material_path(material) %></td>
     <td><%= link_to 'Edit', edit_admin_material_path(material) %></td>
     <td><%= link_to 'Destroy', admin_material_path(material), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
   <% end %>
-
 </table>
-
+<%= link_to 'Create', new_admin_material_path, :class => "btn btn-primary" %>
 	<br />
+
+  <ul class = "pagination">
+      <%= will_paginate @materials %>
+  </ul>

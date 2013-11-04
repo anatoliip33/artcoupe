@@ -1,7 +1,5 @@
 <h2><strong><%= 'Fillings' %></strong></h2>
 
-<%= link_to 'Create', new_admin_filling_path, :class => "btn btn-primary", :id => "create" %>
-
 <table class="table">
   <tr>
     <th><%= 'File path' %></th>
@@ -20,7 +18,10 @@
     <td><%= link_to 'Destroy', admin_filling_path(filling), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
   <% end %>
-
 </table>
-
+<%= link_to 'Create', new_admin_filling_path, :class => "btn btn-primary" %>
 <br />
+
+<ul class = "pagination">
+    <%= will_paginate @fillings %>
+</ul>

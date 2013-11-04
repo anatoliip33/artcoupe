@@ -1,6 +1,7 @@
 Artcoupe::Application.routes.draw do
-  namespace :admin do
 
+  namespace :admin do
+    
   controller :admin do
         get "login" , :action => :login, :as => :login
         post "login_attempt" , :action => :login_attempt, :as => :login_attempt
@@ -26,10 +27,6 @@ controller :error do
   get "error/404", :action => :error404, :as => :error404
 end
       
-match '/*path', :controller => :error, :action => :error404
-
-
-
   resources :cabinets, only: [:index]
 
 
@@ -108,6 +105,8 @@ root :to => 'store#index'
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root to: 'store#index', as: 'store'
+
+  match '/*path', :controller => :error, :action => :error404
 
   # See how all your routes lay out with "rake routes"
 

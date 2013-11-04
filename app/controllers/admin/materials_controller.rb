@@ -4,7 +4,7 @@ class Admin::MaterialsController < ApplicationController
   before_filter :check_auth
 
   def index
-    @materials = Material.all
+    @materials = Material.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

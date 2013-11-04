@@ -56,10 +56,13 @@ ActiveRecord::Schema.define(:version => 20131017183959) do
 
   create_table "materials", :force => true do |t|
     t.string   "title"
-    t.string   "image_url"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.string   "category"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "qualities", :force => true do |t|

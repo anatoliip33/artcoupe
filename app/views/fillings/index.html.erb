@@ -6,34 +6,34 @@
       <div class="categories-wrp border_top">
         <ul class="categories-list categories-list_fill">
           <li>
-            <%= link_to_unless_current("Шкафы 1,1 — 1,5 м", fillings_path(:category => 'smallcoupe' ), class: 'link_dashed') { link_to("Шкафы 1,1 — 1,5 м", fillings_path(:category => 'smallcoupe' ), class: 'link_round') } %>
+            <%= link_to "Шкафы 1,1 — 1,5 м", params.merge({:category => 'smallcoupe'}), class: "#{ (params[:category] == 'smallcoupe') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Шкафы 1,5 — 2,2 м", fillings_path(:category => 'mediumcoupe' ), class: 'link_dashed') { link_to("Шкафы 1,5 — 2,2 м", fillings_path(:category => 'mediumcoupe' ), class: 'link_round') } %>
+            <%= link_to "Шкафы 1,5 — 2,2 м", params.merge({:category => 'mediumcoupe'}), class: "#{ (params[:category] == 'mediumcoupe') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Шкафы более 2,2 м", fillings_path(:category => 'bigcoupe' ), class: 'link_dashed') { link_to("Шкафы более 2,2 м", fillings_path(:category => 'bigcoupe' ), class: 'link_round') } %>
+            <%= link_to "Шкафы более 2,2 м", params.merge({:category => 'bigcoupe'}), class: "#{ (params[:category] == 'bigcoupe') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Библиотеки", fillings_path(:category => 'biblio' ), class: 'link_dashed') { link_to("Библиотеки", fillings_path(:category => 'biblio' ), class: 'link_round') } %>
+            <%= link_to "Библиотеки", params.merge({:category => 'biblio'}), class: "#{ (params[:category] == 'biblio') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Шкафы глубиной до 450 мм", fillings_path(:category => 'box' ), class: 'link_dashed') { link_to("Шкафы глубиной до 450 мм", fillings_path(:category => 'box' ), class: 'link_round') } %>
+            <%= link_to "Шкафы глубиной до 450 мм", params.merge({:category => 'box'}), class: "#{ (params[:category] == 'box') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Однорельсовые системы", fillings_path(:category => 'onerail' ), class: 'link_dashed') { link_to("Однорельсовые системы", fillings_path(:category => 'onerail' ), class: 'link_round') } %>
+            <%= link_to "Однорельсовые системы", params.merge({:category => 'onerail'}), class: "#{ (params[:category] == 'onerail') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Гардеробные", fillings_path(:category => 'wardrobe' ), class: 'link_dashed') { link_to("Гардеробные", fillings_path(:category => 'wardrobe' ), class: 'link_round') } %>
+            <%= link_to "Гардеробные", params.merge({:category => 'wardrobe'}), class: "#{ (params[:category] == 'wardrobe') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Ниши", fillings_path(:category => 'nisha' ), class: 'link_dashed') { link_to("Ниши", fillings_path(:category => 'nisha' ), class: 'link_round') } %>
+            <%= link_to "Ниши", params.merge({:category => 'nisha'}), class: "#{ (params[:category] == 'nisha') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Угловые шкафы", fillings_path(:category => 'corner' ), class: 'link_dashed') { link_to("Угловые шкафы", fillings_path(:category => 'corner' ), class: 'link_round') } %>
+            <%= link_to "Угловые шкафы", params.merge({:category => 'corner'}), class: "#{ (params[:category] == 'corner') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to_unless_current("Показать все", fillings_path(:category => nil ), class: 'link_dashed') { link_to("Показать все", fillings_path(:category => nil ), class: 'link_round') } %>
+            <%= link_to "Показать все", params.merge({:category => nil}), class: "#{ (params[:category] == nil) ? 'link_round' : 'link_dashed'}" %>
           </li>
         </ul>
       </div>
