@@ -25,6 +25,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'libv8', '~> 3.11.8'
+
 gem 'jquery-ui-rails'
 
 gem 'will_paginate', '~> 3.0.0'
