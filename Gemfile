@@ -33,6 +33,8 @@ gem 'will_paginate', '~> 3.0.0'
 
 gem 'kaminari'
 
+gem 'rails_12factor'
+
 gem "paperclip", "~> 3.5.1"
 
 gem 'active_link_to'
