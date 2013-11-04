@@ -26,6 +26,8 @@ gem 'jquery-rails'
 
 gem 'sass-rails'
 
+gem 'active_link_to'
+
 gem 'postgres-pr'
 
 gem 'libv8', '~> 3.11.8'
