@@ -65,5 +65,7 @@ module Artcoupe
 
     #Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+    ActiveSupport::Deprecation.behavior = Proc.new { |msg, stack| $stderr.puts msg unless msg =~ /You have Rails 2.3-style plugins/ }
   end
 end
