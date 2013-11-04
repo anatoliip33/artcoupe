@@ -14,7 +14,6 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -24,6 +23,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'sass-rails'
 
 gem 'libv8', '~> 3.11.8'
 
@@ -36,8 +37,6 @@ gem 'kaminari'
 gem 'rails_12factor'
 
 gem "paperclip", "~> 3.5.1"
-
-gem 'active_link_to'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 
