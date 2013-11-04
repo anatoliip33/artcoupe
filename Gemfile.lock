@@ -71,6 +71,7 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     polyglot (0.3.3)
+    postgres-pr (0.6.3)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -135,6 +136,7 @@ DEPENDENCIES
   kaminari
   libv8 (~> 3.11.8)
   paperclip (~> 3.5.1)
+  postgres-pr
   rails (= 3.2.13)
   rails_12factor
   sass-rails

@@ -26,6 +26,8 @@ gem 'jquery-rails'
 
 gem 'sass-rails'
 
+gem 'postgres-pr'
+
 gem 'libv8', '~> 3.11.8'
 
 gem 'jquery-ui-rails'
