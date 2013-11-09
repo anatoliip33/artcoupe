@@ -502,7 +502,8 @@
 }
 
 .count-list li:before {
-	
+	content: counter(list1) ". ";
+	counter-increment: list1;
 	font-size: 13px;
 	line-height: 20px;
 	color: #83a7ca;
