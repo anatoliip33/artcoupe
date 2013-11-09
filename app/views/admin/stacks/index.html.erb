@@ -2,7 +2,7 @@
 
 <table class="table">
   <tr>
-    <th><%= 'File path' %></th>
+    <th><%= 'File image' %></th>
     <th><%= 'Title' %></th>
     <th></th>
     <th></th>
@@ -11,16 +11,27 @@
 
   <% @stacks.each do |stack| %>
   <tr>
-    <td><%=  stack.image %></td>
+    <td>
+      <ul class="photo-list">
+        <li>
+          <a class="photo-list__link">
+            <div>
+              <%= image_tag(stack.image) %>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </td>
     <td><%= stack.name %></td>
     <td><%= link_to 'Show', admin_stack_path(stack) %></td>
     <td><%= link_to 'Edit', edit_admin_stack_path(stack) %></td>
     <td><%= link_to 'Destroy', admin_stack_path(stack), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
   <% end %>
-
 </table>
-
+<div class="btncreate">
+<%= link_to 'Create', new_admin_stack_path, :class => "btn btn-primary" %>
+</div>
 	<br />
 
-<%= link_to 'Create', new_admin_stack_path, :class => "btn btn-primary" %>
+

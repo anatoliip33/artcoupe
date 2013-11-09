@@ -1,3 +1,12 @@
 <h2><strong><%= 'Material' %></strong></h2>
 
+<div class="field">
+  <h4><label class="label label-primary">
+    <%=  'File image' %>
+  </label></h4>
+  <div>
+  <%= image_tag(@material.image) %>
+  </div>
+ </div>
+
 <%= render 'form' %>

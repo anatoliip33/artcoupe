@@ -1,17 +1,29 @@
-<h2><strong><%= 'Fillings' %></strong></h2>
-
+<h2 id="poz"><strong><%= 'Fillings' %></strong></h2>
+  <ul class = "pagination">
+      <%= will_paginate @fillings %>
+  </ul>
 <table class="table">
   <tr>
-    <th><%= 'File path' %></th>
+    <th><%= 'File image' %></th>
     <th><%= 'Title' %></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+  
   <% @fillings.each do |filling| %>
   <tr>
-    <td><%=  filling.image %></td>
+    <td>
+      <ul class="photo-list">
+              <li>
+                <a class="photo-list__link">
+                  <div>
+                    <%= image_tag(filling.image) %>
+                  </div>
+                </a>
+              </li>
+          </ul>
+    </td>
     <td><%= filling.name %></td>
     <td><%= link_to 'Show', admin_filling_path(filling) %></td>
     <td><%= link_to 'Edit', edit_admin_filling_path(filling) %></td>
@@ -19,9 +31,7 @@
   </tr>
   <% end %>
 </table>
+<div class="btncreate">
 <%= link_to 'Create', new_admin_filling_path, :class => "btn btn-primary" %>
+</div>
 <br />
-
-<ul class = "pagination">
-    <%= will_paginate @fillings %>
-</ul>

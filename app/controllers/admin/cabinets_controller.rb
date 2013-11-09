@@ -4,7 +4,7 @@ class Admin::CabinetsController < ApplicationController
   before_filter :check_auth
 
   def index
-    @cabinets = Cabinet.paginate(:page => params[:page], :per_page => 15)
+    @cabinets = Cabinet.paginate(:page => params[:page], :per_page => 10)
 
 
     respond_to do |format|

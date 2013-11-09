@@ -1,3 +1,12 @@
 <h2><strong><%= 'Edit Filling' %></strong></h2>
 
+<div class="field">
+  <h4><label class="label label-primary">
+    <%=  'File image' %>
+  </label></h4>
+  <div class="photo-list__image">
+  <%= image_tag(@filling.image) %>
+  </div>
+  </div>
+  
 <%= render 'form' %>

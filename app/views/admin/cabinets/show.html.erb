@@ -6,8 +6,10 @@
 </p>
 
 <p>
-  <b><%= 'File path' %></b>
-  <%= @cabinet.image %>
+  <b><%= 'File image' %></b>
+  <a class="photo-list__image">
+  <%= image_tag(@cabinet.image) %>
+  </a>
 </p>
 
 <%= link_to 'Index', admin_cabinets_path %>

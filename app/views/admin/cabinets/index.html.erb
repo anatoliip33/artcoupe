@@ -1,17 +1,28 @@
-<h2><strong><%= 'Cabinets' %></strong></h2>
-
+<h2 id="poz" ><strong><%= 'Cabinets' %></strong></h2>
+<ul class = "pagination" >
+      <%= will_paginate @cabinets %>
+    </ul>
 <table class="table">
   <tr>
-    <th><%= 'File path' %></th>
+    <th><%= 'File image' %></th>
     <th><%= 'Title' %></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
   <% @cabinets.each do |cabinet| %>
   <tr>
-    <td><%=  cabinet.image %></td>
+<td>
+  <ul class="photo-list">
+            <li>
+              <a class="photo-list__link">
+                <div>
+                  <%= image_tag(cabinet.image) %>
+                </div>
+              </a>
+            </li>
+        </ul>
+</td>
     <td><%= cabinet.name %></td>
     <td><%= link_to 'Show', admin_cabinet_path(cabinet) %></td>
     <td><%= link_to 'Edit', edit_admin_cabinet_path(cabinet) %></td>
@@ -19,9 +30,7 @@
   </tr>
   <% end %>
 </table>
+<div class="btncreate">
 <%= link_to 'Create', new_admin_cabinet_path, :class => "btn btn-primary" %>
+</div>
 	<br />
-
-   <ul class = "pagination">
-      <%= will_paginate @cabinets %>
-      </ul>

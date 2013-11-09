@@ -6,8 +6,10 @@
 </p>
 
 <p>
-  <b><%= 'File path' %></b>
-  <%= @stack.image %>
+  <b><%= 'File image' %></b>
+  <a class="photo-list__image">
+  <%= image_tag(@stack.image) %>
+  </a>
 </p>
 
 <%= link_to 'Index', admin_stacks_path %>
