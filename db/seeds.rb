@@ -175,6 +175,42 @@ end
   })
 end
 
+
+49.times do |c|
+  Cabinet.create({
+  name: "cabinet-#{c+2}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', 'direct', "cabinet-#{c+2}.jpg")),
+  category: 'direct'
+  })
+end
+
+10.times do |c|
+  Cabinet.create({
+  name: "cabinet-#{c+1}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', 'corner', "cabinet-#{c+1}.jpg")),
+  category: 'corner'
+  })
+end
+
+10.times do |c|
+  Cabinet.create({
+  name: "cabinet-#{c+1}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', 'dark', "cabinet-#{c+1}.jpg")),
+  category: 'dark'
+  })
+end
+
+51.times do |c|
+  Cabinet.create({
+  name: "cabinet-#{c+1}",
+  image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', 'white', "cabinet-#{c+1}.jpg")),
+  category: 'white'
+  })
+end
+
+
+
+
 Cabinet.create({
 name: "cabinet-5",
 image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', "cabinet-5.jpg")),

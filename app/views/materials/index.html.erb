@@ -13,7 +13,7 @@
             <%= link_to "Цвет ДСП", params.merge({:category => 'dsp'}), class: "#{ (params[:category] == 'dsp') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <%= link_to "Цвет профиля", params.merge({:category => 'color prof'}), class: "#{ (params[:category] == 'color prof') ? 'link_round' : 'link_dashed'}" %>
+            <%= link_to "Цвет профиля", params.merge({:category => 'color prof'}), class: "#{ (params[:category] == 'color prof') ? 'link_round' : 'link_dashed'}", :remote => true%>
           </li>
           <li>
             <%= link_to "Прочие материалы", params.merge({:category => 'other'}), class: "#{ (params[:category] == 'other') ? 'link_round' : 'link_dashed'}" %>

@@ -18,20 +18,20 @@
           </li>
           <li class="indent_horiz">Тип шкафа:</li>
           <li>
-            <a href="/cabinets?kind" class="link_dashed" data-remote="true">Прямой</a>
+            <%= link_to "Прямой", params.merge({:category => 'direct'}), class: "#{ (params[:category] == 'direct') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <a href="/cabinets?kind" class="link_dashed" data-remote="true">Угловой</a>
+            <%= link_to "Угловой", params.merge({:category => 'corner'}), class: "#{ (params[:category] == 'corner') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
             <%= link_to "Стеллажи", params.merge({:category => 'stacks'}), class: "#{ (params[:category] == 'stacks') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li class="indent_horiz">Тон:</li>
           <li>
-            <a href="/cabinets?tone" class="link_dashed" data-remote="true">Светлый</a>
+            <%= link_to "Светлый", params.merge({:category => 'white'}), class: "#{ (params[:category] == 'white') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li>
-            <a href="/cabinets?tone" class="link_dashed" data-remote="true">Темный</a>
+            <%= link_to "Темный", params.merge({:category => 'dark'}), class: "#{ (params[:category] == 'dark') ? 'link_round' : 'link_dashed'}" %>
           </li>
           <li><%= link_to "Показать все", params.merge({:category => nil}), class: "#{ (params[:category] == nil) ? 'link_round' : 'link_dashed'}" %>
           </li>
