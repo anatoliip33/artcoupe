@@ -68,5 +68,18 @@ module Artcoupe
 
     ActiveSupport::Deprecation.behavior = Proc.new { |msg, stack| $stderr.puts msg unless msg =~ /You have Rails 2.3-style plugins/ }
   config.serve_static_assets = true
+
+config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+        :address              => "smtp.gmail.com",
+        :port                 => 587,
+        :domain               => "gmail.com",
+        :user_name            => "testnikart@gmail.com",
+        :password             => "sharovik",
+        :authentication       => "plain",
+        :enable_starttls_auto => true
+  }
   end
 end

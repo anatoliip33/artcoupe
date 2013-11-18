@@ -2,6 +2,8 @@ require 'bcrypt'
 
 class Settings < ActiveRecord::Base
 
+  attr_accessible :feedback_email
+
   attr_accessible :hashed_password
   attr_accessible :old_password, :new_password, :new_password_confirmation
   attr_accessor :old_password, :new_password, :new_password_confirmation

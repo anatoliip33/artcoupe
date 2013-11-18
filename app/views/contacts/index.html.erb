@@ -21,12 +21,18 @@
         </div>
             <div class = "contact-map" id="map-canvas"></div>
       </div>
-      <form accept-charset="UTF-8" action="/contacts/create_feedback" class="contacts-form" id="new_feedback" method="post">
-        <label class="text_blue text_bold">Написать нам:</label>
-        <input class="contact-mail" id="feedback_email" name="feedback[email]" placeholder="E-mail" size="30"type="email" />
-        <textarea id="feedback_text" name="feedback[text]" placeholder="Текст сообщения">
-        </textarea>
-        <input class="contact-submit" name="commit" type="submit" value="отправить" />
-      </form>
+      <div id="feedback">
+        <form accept-charset="UTF-8" action="/" class="contacts-form" id="new_feedback" method="post">
+          <label class="text_blue text_bold">Написать нам:</label>
+          <label>
+            <input type="text" name="email" value="" placeholder="E-mail" class="contact-mail">
+          </label>
+          <label>
+            <textarea name="text" placeholder="Текст сообщения" >
+            </textarea>
+          </label>
+          <input class="contact-submit" name="commit" type="submit" value="отправить">
+        </form>
+      </div>
     </div>
   </div>
