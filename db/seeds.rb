@@ -1,12 +1,9 @@
 #encoding: utf-8
 
-Settings.create(
-  hashed_password: BCrypt::Password.create('admin')
-)
-
-Settings.create(
+settings = Settings.create({
+  hashed_password: BCrypt::Password.create('admin'),
   feedback_email: "anatoliipolishchuk@gmail.com"
-)
+})
 
 # . . .
     material_names = ["ДСП Дуб Феррара чёрно-коричневый (EGGER)", "ДСП Французский Орех (EGGER)", 

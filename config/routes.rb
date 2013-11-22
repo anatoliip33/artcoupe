@@ -18,6 +18,7 @@ Artcoupe::Application.routes.draw do
   resources :stacks
   resources :materials
   resources :cabinets
+  resources :feedbacks, :only => [:index, :show, :destroy]
   
   root :to => "cabinets#index"
   
@@ -28,28 +29,18 @@ controller :error do
 end
       
   resources :cabinets, only: [:index]
-
-
   resources :fillings, only: [:index]
-
-
   resources :materials, only: [:index]
-
-
   resources :stacks, only: [:index]
-
-
   resources :qualities, only: [:index]
-
-
   resources :hardwares, only: [:index]
-
-
   resources :faqs, only: [:index]
-
-
   resources :contacts, only: [:index]
-
+  
+  controller :contacts do
+    get '/contacts', :action => :index, :as => :contacts
+    post '/contacts/create_feedback', :action => :create_feedback, :as => :create_feedback
+  end
 
   get "store/index"
 

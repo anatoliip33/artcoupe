@@ -2,7 +2,7 @@ class FeedbackMailer < ActionMailer::Base
   default from: "testnikart@gmail.com",
           subject: "artcoupe feedback."
 
-  def sendmail(email, text)
+  def information_request (email, text)
     settings = Settings.first
     @email = email
     @text = text
@@ -10,7 +10,7 @@ class FeedbackMailer < ActionMailer::Base
       :to => settings.feedback_email,
     ) do |format|
       format.html {
-        render 'feedback'
+        render 'information_request'
       }
     end
   end

@@ -22,17 +22,12 @@
             <div class = "contact-map" id="map-canvas"></div>
       </div>
       <div id="feedback">
-        <form accept-charset="UTF-8" action="/" class="contacts-form" id="new_feedback" method="post">
-          <label class="text_blue text_bold">Написать нам:</label>
-          <label>
-            <input type="text" name="email" value="" placeholder="E-mail" class="contact-mail">
-          </label>
-          <label>
-            <textarea name="text" placeholder="Текст сообщения" >
-            </textarea>
-          </label>
-          <input class="contact-submit" name="commit" type="submit" value="отправить">
-        </form>
+        <%= form_for @feedback, :url => create_feedback_path, :html => {:class => 'contacts-form'}   do |f| %>
+            <%= f.label 'Написать нам', :class => "text_blue text_bold" %>:
+            <%= f.email_field :email, :placeholder => "E-mail", :class => "contact-mail" %><br />
+            <%= f.text_area :text, :placeholder => "Текст сообщения" %><br />
+            <%= f.submit "отправить", :class => "contact-submit" %>
+        <% end %>
       </div>
     </div>
   </div>

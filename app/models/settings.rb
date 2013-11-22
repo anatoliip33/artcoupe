@@ -2,8 +2,6 @@ require 'bcrypt'
 
 class Settings < ActiveRecord::Base
 
-  attr_accessible :feedback_email
-
   attr_accessible :hashed_password
   attr_accessible :old_password, :new_password, :new_password_confirmation
   attr_accessor :old_password, :new_password, :new_password_confirmation
@@ -12,6 +10,8 @@ class Settings < ActiveRecord::Base
   validates :new_password, :confirmation => true,
                            :if => :password_changed?
   before_save :hash_new_password, :if => :password_changed?
+
+  attr_accessible :feedback_email
 
   @@instance = Settings.first
 
