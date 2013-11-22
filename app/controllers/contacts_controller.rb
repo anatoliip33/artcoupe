@@ -6,6 +6,7 @@ class ContactsController < ApplicationController
 
   def create_feedback
     @feedback = Feedback.new(params[:feedback])
+    FeedbackMailer.information_request(params[:text], params[:email]).deliver
 
     respond_to do |format|
       if @feedback.save
