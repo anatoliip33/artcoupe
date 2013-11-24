@@ -141,12 +141,15 @@
 				<div class="index-faq-wrp">
 					<ul class="index-faq-list">
 						<li class="index-faq__item">
-							<div class="faq__text">Вы предоставляете гарантию на шкафы?</div>
-							<a href="/faq?number=17" class="faq__link">получить ответ</a>
+							<div class="faq__text">
+								<%= @faq.question %>
+							</div>
+							<%= link_to 'получить ответ', faq_path(:number => @faq_number), 
+								:class => 'faq__link' %>
 						</li>
 					</ul>
 				</div>
-				<a href="/faq?page=2#17" class="control_r"></a>
+				<%= link_to ' ', faq_path(:number => @faq_number), :class => 'control_r' %>
 			</div>
 		</div>
 	</div>

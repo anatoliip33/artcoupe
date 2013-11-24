@@ -36,6 +36,10 @@ end
   resources :hardwares, only: [:index]
   resources :faqs, only: [:index]
   resources :contacts, only: [:index]
+
+  controller :faq do
+    get '/faqs', :action => :index, :as => :faq
+  end
   
   controller :contacts do
     get '/contacts', :action => :index, :as => :contacts

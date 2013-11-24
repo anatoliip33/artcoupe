@@ -1,5 +1,16 @@
 #encoding: utf-8
 
+class Array
+  def next
+    @index ||= 0
+    result = self[@index]
+    if (@index += 1) >= self.length
+      @index = 0
+    end
+    result
+  end
+end
+
 settings = Settings.create({
   hashed_password: BCrypt::Password.create('admin'),
   feedback_email: "anatoliipolishchuk@gmail.com"

@@ -3,19 +3,34 @@
     <div class="title_round title_orange title_large">вопросы и ответы</div>
     <div class="question-wrp">
       <ul class="question-navigation question-navigation_top">
-       <%= will_paginate @faqs %>
+      <% @pages.times do |index| %> 
+        <li>
+            <%= link_to index + 1, faq_path(:page => index + 1),
+            :class => (index + 1 == @page ? 'link_active' : 'link_solid') %>        
+        </li>
+        <% end %>
       </ul>
       <ul class="count-list count-list_alt2">
-        <% @faqs.each do |f| %>
-        <li class="border_bottom">
-          <div class="text-title"><%= f.question %></div>
-          <div><%= f.answer %></div>
+        <% @faqs.each_with_index do |faq, index| %>
+        <%= content_tag 'li', :id => @offset + index + 1, :class => ('border_bottom' unless index + 1 == @faqs.count) do %>
+        <div class="counter"><%= (@offset + index + 1).to_s + '.' %></div>
+        <div class="text-title">
+          <%= faq.question %>
+        </div>
+        <div>
+          <%= faq.answer %>
+        </div>
+        <% end %>
+        <% end %>
+        </ul>
+        <ul class="question-navigation question-navigation_bottom">
+      <% @pages.times do |index| %> 
+        <li>
+            <%= link_to index + 1, faq_path(:page => index + 1),
+            :class => (index + 1 == @page ? 'link_active' : 'link_solid') %>        
         </li>
-       <% end %>
-       </ul>
-      <ul class="question-navigation question-navigation_bottom">
-      <%= will_paginate @faqs %>
+        <% end %>
       </ul>
-    </div>
+     </div>
   </div>
 </div>

@@ -502,14 +502,27 @@
 }
 
 .count-list li:before {
-	content: counter(list1) ". ";
 	counter-increment: list1;
+	content: counter(list1) ". ";
 	font-size: 13px;
 	line-height: 20px;
 	color: #83a7ca;
 	width: 20px;
 	text-align: left;
 	font-family: "PT Sans Bold";
+}
+
+.count-list li .counter {
+  position: absolute;
+  left: -5px;
+  top: 25px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #83a7ca;
+  width: 20px;
+  text-align: left;
+  font-family: "PT Sans Bold";
+  background-color: white;
 }
 
 .count-list_alt1 {
