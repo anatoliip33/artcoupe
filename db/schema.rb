@@ -83,6 +83,9 @@ ActiveRecord::Schema.define(:version => 20131120152831) do
   create_table "settings", :force => true do |t|
     t.string   "hashed_password"
     t.string   "feedback_email"
+    t.string   "cabinet_attrs"
+    t.string   "filling_attrs"
+    t.string   "material_attrs"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end

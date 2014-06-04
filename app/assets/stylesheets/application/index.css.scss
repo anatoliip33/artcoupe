@@ -129,7 +129,7 @@
 }
 
 .border_top {
-	position: relative;	
+	position: relative;
 }
 
 .border_top:before {
@@ -362,7 +362,7 @@
 	top: 20px;
 	left: 40px;
 	width: 54px;
-	height: 80px;
+	height: 10px;
 	background: image-url("pin.png") no-repeat 0 0;
 }
 
@@ -1242,7 +1242,7 @@ line-height: 77px;
 	line-height: 15px;
 	color: #ffae00;
 	border-bottom: 1px solid #fff;
-	font-family: "Arial"; 
+	font-family: "Arial";
 }
   .pagination a {
 	vertical-align: middle;
@@ -1256,9 +1256,9 @@ line-height: 77px;
     .pagination a:hover{
     	color: #ffae00;
 	background: none;
-    } 
+    }
 
-    
+
 .layout-error {
 	min-height: 300px;
 }
@@ -1310,13 +1310,13 @@ line-height: 77px;
 
 /*
 a {
- 
+
 -moz-transition: color 0.1s 0.02s ease;
  -o-transition: color 0.1s 0.02s ease;
  -webkit-transition: color 0.1s 0.02s ease;
  color:#222;
  }
- 
+
 a:hover {
  color: #1FA2E1;
  }*/

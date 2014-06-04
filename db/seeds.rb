@@ -17,9 +17,9 @@ settings = Settings.create({
 })
 
 # . . .
-    material_names = ["ДСП Дуб Феррара чёрно-коричневый (EGGER)", "ДСП Французский Орех (EGGER)", 
-    								"ДСП Фино Бронза (EGGER)", "ДСП Ясень Серцевинный (EGGER)", 
-    								"ДСП Береза Майнау (EGGER)", "ДСП Дуб натуральный (EGGER)", 
+    material_names = ["ДСП Дуб Феррара чёрно-коричневый (EGGER)", "ДСП Французский Орех (EGGER)",
+    								"ДСП Фино Бронза (EGGER)", "ДСП Ясень Серцевинный (EGGER)",
+    								"ДСП Береза Майнау (EGGER)", "ДСП Дуб натуральный (EGGER)",
                                                     "Кожзам бордовый узор", "Кожзам бежевый узор", "Кожзам с тиснением какао",
                                                     "Кожзам с тиснением бежевый", "Профиль Шампань матовая", "Профиль Хром матовый",
                                                     "Профиль Венге", "Профиль Золото матовое"]
@@ -32,35 +32,34 @@ settings = Settings.create({
 
 25.times do |i|
   Material.create({
-    title: material_names[i % material_names.length], 
+    title: material_names[i % material_names.length],
     image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+1}.jpg"))
     })
 end
 
 15.times do |i|
   Material.create({
-  	title: material_names[i % material_names.length], 
+  	title: material_names[i % material_names.length],
   	image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+1}.jpg")),
-      category: 'dsp' 
+      category: 'dsp'
   	})
 end
 
 4.times do |i|
   Material.create({
-    title: prof_names[i % prof_names.length], 
+    title: prof_names[i % prof_names.length],
     image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+16}.jpg")),
-    category: 'color prof' 
+    category: 'color prof'
     })
 end
 
 6.times do |i|
   Material.create({
-    title: other_names[i % other_names.length], 
+    title: other_names[i % other_names.length],
     image: File.open(Rails.root.join('test', 'assets', 'images', 'materials', "color-#{i+20}.jpg")),
-    category: 'other' 
+    category: 'other'
     })
 end
-
 
 2.times do |i|
   Stack.create({
@@ -155,7 +154,6 @@ end
   })
 end
 
-
 61.times do |c|
   Cabinet.create({
   name: "cabinet-#{c+1}",
@@ -186,7 +184,6 @@ end
   category: 'moredors'
   })
 end
-
 
 49.times do |c|
   Cabinet.create({
@@ -220,9 +217,6 @@ end
   })
 end
 
-
-
-
 Cabinet.create({
 name: "cabinet-5",
 image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', "cabinet-5.jpg")),
@@ -234,7 +228,6 @@ name: "cabinet-36",
 image: File.open(Rails.root.join('test', 'assets', 'images', 'cabinets', "cabinet-36.jpg")),
 category: 'stacks'
 })
-
 
 
 Faq.create(

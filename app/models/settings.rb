@@ -1,6 +1,10 @@
 require 'bcrypt'
 
 class Settings < ActiveRecord::Base
+  attr_accessible :cabinet_attrs, :filling_attrs, :material_attrs
+  serialize :cabinet_attrs
+  serialize :filling_attrs
+  serialize :material_attrs
 
   attr_accessible :hashed_password
   attr_accessible :old_password, :new_password, :new_password_confirmation
